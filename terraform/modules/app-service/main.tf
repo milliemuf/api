@@ -7,6 +7,15 @@ terraform {
   }
 }
 
+provider "azurerm" {
+  features {}
+
+  subscription_id   = "azure-cli-2022-01-12-12-45-17"
+  tenant_id         = "0b16002b-2d76-47b9-ad0d-44e8af665640"
+  client_id         = "e1cb0e86-c362-4b34-a75a-048bda004d16"
+  client_secret     = "N.OZqWuv6EBoloIBL-FSGHiECU7XNPdLhL"
+}
+
 resource "azurecaf_name" "app_service_plan" {
   name          = var.application_name
   resource_type = "azurerm_app_service_plan"
